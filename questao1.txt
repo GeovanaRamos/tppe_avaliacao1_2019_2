@@ -1,0 +1,23 @@
+a) Diferencie interfaces públicas de interfaces publicadas e justifique por que interfaces publicadas não devem ser refatoradas.
+
+Públicas - todas as classes da MESMA aplicação podem acessar
+Publicadas - classes de OUTRAS aplicações podem acessar. Não podem ser refatoradas, pois não é possível encontrar todas as classes que a utilizam, por estar disponível para outras aplicações.
+
+
+
+b) Qual a diferença entre os maus cheiros "Cirurgia com rifle" e "Mudanças divergentes". Responda informando claramente os princípios de projetos que estão sendo violados em cada um dos maus-cheiros.
+
+Mudanças divergentes - é quando muitas mudanças são feitas em uma única classe. Pode indicar existência de código duplicado.
+Cirurgia com Rifle - refere-se a quando uma única alteração é feita em várias classes simultaneamente. Pode indicar que muitas classes dividem uma mesma responsabilidade.
+
+
+
+c) Refatoração sempre leva a projetos mais eficientes em termo de desempenho. A afirmativa é verdadeira ou falsa? Justifique.
+
+Falsa. Nem sempre leva a projetos mais eficientes. Às vezes, para ter um bom design de código, é preciso abrir mão do desempenho. Porém, em alguns outros casos é possível ter ganho de desempenho.
+
+
+
+d) Como se tem a garantia de que uma refatoração teve sucesso?
+
+Primeiramente, deve-se rodar a suíte de testes e conferir se algum bug foi introduzido na refatoração. Caso seja necessária uma análise mais profunda, devem ser coletadas métricas referentes ao objetivo de refatoração. Os objetivos podem ser: cógido legível, código fácil de manter e evoluir etc. Como métricas podem ser coletados: número de bugs, número de commits para correção de erros etc.
